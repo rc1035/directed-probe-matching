@@ -144,3 +144,30 @@ Filtering false positive matchings from cluster by comparing device fingerprints
 7) Test step(6) with token lifetimes varying from 1 second to original 12 hours. Used to test the effectiveness of matching with respect to more aggressive randomisation.
 
 Run runForRandomisationPeriods.py
+
+```
+$ python3.6 runForRandomisationPeriods.py 
+Randomisation period: 0:00:01
+Applying MAC randomisation to probes.
+Tokens total: 1382064
+Calculating valid pairs of tokens...
+MACs sending directed probes: 9994
+Tokens sending directed probes: 539788
+Total pairs:  145685272578
+Valid pairs: 323552554
+Invalid pairs: 145361720024
+Matching tokens with the same SSID set.
+Matching SSID sets with a Jaccard similarity index greater than 0.67
+Clustering tokens with similar SSID sets.
+Filtering false positive matchings from cluster by comparing device fingerprints.
+{'accuracy': 0.9980501645775628,
+ 'clusters': 14112,
+ 'fn': 275106242,
+ 'fp': 8956063,
+ 'fpr': 6.161225251408215e-05,
+ 'macs': 1095,
+ 'median': datetime.timedelta(15, 8433, 657877),
+ 'tn': 145352763961,
+ 'tp': 48446312,
+ 'tpr': 0.14973243573901754}
+```
