@@ -127,7 +127,7 @@ class TestSimilarSSIDMethods(unittest.TestCase):
         self.assertEqual(ssid_set_to_matches[setB], {setA, setC})
         self.assertEqual(ssid_set_to_matches[setC], {setA, setB})
 
-    def test_similar_ssid_set_two(self):
+    def test_similar_ssid_set_three(self):
         """Sets that share all elements in common i.e. are the same"""
         ssid_set_to_matches = clusterSimilarSSIDSets.get_similar_ssid_sets([setA, setB, setC], 1)
         self.assertEqual(len(ssid_set_to_matches), 0)
